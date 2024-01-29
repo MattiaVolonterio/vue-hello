@@ -33,6 +33,23 @@
 
   <body>
     <!-- app container declaration -->
-    <div id="app"></div>
+    <div id="app">
+      <div class="container d-flex flex-column align-items-center">
+        <img :src="titleInfo.titleImgSrc" alt="Boolean logo" />
+        <h1 class="my-4">{{ titleInfo.pageTitle }}</h1>
+
+        <!-- input collegato al titolo per modificare il testo -->
+        <label for="input-text" class="form-label"
+          >Inserisci qui il testo e vedrai cambiare il titlo</label
+        >
+        <input
+          type="text"
+          name="inputText"
+          id="input-text"
+          class="form-control"
+          v-model="titleInfo.pageTitle"
+        />
+      </div>
+    </div>
   </body>
 </html>

@@ -2,6 +2,11 @@ const { createApp } = Vue;
 
 createApp({
   data() {
-    return {};
+    return {
+      titleInfo: {
+        pageTitle: "Questo è il titolo della pagina",
+        titleImgSrc: "./img/logo.svg",
+      },
+    };
   },
 }).mount("#app");
